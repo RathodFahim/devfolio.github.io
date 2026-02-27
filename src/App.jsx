@@ -119,8 +119,8 @@ const Portfolio = () => {
     role: "Full Stack Developer & IT Student",
     email: "rathodrathod75850@gmail.com",
     phone: "(+91) 6351144224",
-    github: "https://github.com/rathod-fahim",
-    linkedin: "https://linkedin.com/in/rathod-fahim",
+    github: "https://github.com/RathodFahim",
+    linkedin: "https://www.linkedin.com/in/mohammadfahim-rathod-1200a0218/",
     summary: "A motivated and proactive Information Technology student with a strong foundation in full-stack web development and a passion for continuous learning. Eager to apply a problem-solving mindset and hands-on experience in HTML, CSS, JavaScript, and Java to contribute to challenging projects. Keen interest in exploring Data Science and AI/ML."
   };
 
@@ -159,15 +159,15 @@ const Portfolio = () => {
       title: "Fake News Detection",
       description: "Developed an AI/ML app to detect fake news using Python and various ML libraries. Implemented TF-IDF Vectorization for text feature extraction.",
       tech: ["Python", "Pandas", "Numpy", "NLTK", "Scikit-Learn"],
-      link: "#",
-      github: "https://github.com/rathod-fahim"
+      link: "https://github.com/RathodFahim/Fake_news-Detection",
+      github: "https://github.com/RathodFahim/Fake_news-Detection"
     },
     {
       title: "Ping-Pong Game",
       description: "A classic Ping-Pong game using vanilla JavaScript. Features two-player score tracking, responsive controls, and progressive difficulty.",
       tech: ["HTML", "CSS", "JavaScript"],
-      link: "#",
-      github: "https://github.com/rathod-fahim"
+      link: "https://rathodfahim.github.io/ping-pong-pi/",
+      github: "https://github.com/RathodFahim/ping-pong-pi"
     }
   ];
 
