@@ -49,7 +49,7 @@ const Portfolio = () => {
 
   // Resume Data
   const personalInfo = {
-    name: "Mohammadfahim Rathod",
+    name: "MohammadFahim Rathod",
     role: "Full Stack Developer & IT Student",
     email: "rathodrathod75850@gmail.com",
     phone: "(+91) 6351144224",
