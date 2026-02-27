@@ -53,8 +53,8 @@ const Portfolio = () => {
     role: "Full Stack Developer & IT Student",
     email: "rathodrathod75850@gmail.com",
     phone: "(+91) 6351144224",
-    github: "https://github.com/rathod-fahim", // Inferred from @rathod-fahim
-    linkedin: "https://linkedin.com/in/rathod-fahim", // Inferred placeholder
+    github: "https://github.com/RathodFahim", // Inferred from @rathod-fahim
+    linkedin: "https://www.linkedin.com/in/mohammadfahim-rathod-1200a0218/", // Inferred placeholder
     summary: "A motivated and proactive Information Technology student with a strong foundation in full-stack web development and a passion for continuous learning. Eager to apply a problem-solving mindset and hands-on experience in HTML, CSS, JavaScript, and Java to contribute to challenging projects. Keen interest in exploring Data Science and AI/ML."
   };
 
@@ -94,14 +94,14 @@ const Portfolio = () => {
       description: "Developed an AI/ML app to detect fake news using Python and various ML libraries. Implemented TF-IDF Vectorization for text feature extraction.",
       tech: ["Python", "Pandas", "Numpy", "NLTK", "Scikit-Learn"],
       link: "#", // Placeholder for actual link
-      github: "https://github.com/rathod-fahim" // Placeholder
+      github: "https://github.com/RathodFahim/Fake_news-Detection" // Placeholder
     },
     {
       title: "Ping-Pong Game",
       description: "A classic Ping-Pong game using vanilla JavaScript. Features two-player score tracking, responsive controls, and progressive difficulty.",
       tech: ["HTML", "CSS", "JavaScript"],
       link: "#", // Placeholder
-      github: "https://github.com/rathod-fahim" // Placeholder
+      github: "https://github.com/RathodFahim/ping-pong-pi" // Placeholder
     }
   ];
 
@@ -114,10 +114,7 @@ const Portfolio = () => {
       
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent cursor-pointer" onClick={() => scrollToSection('home')}>
-            MR.
-          </div>
+        <div className="container mx-auto px-6 py-4 flex justify-center items-center">
           <div className="hidden md:flex space-x-8 text-sm font-medium">
             {['About', 'Skills', 'Education', 'Projects', 'Contact'].map((item) => (
               <button
@@ -129,12 +126,6 @@ const Portfolio = () => {
               </button>
             ))}
           </div>
-          <a 
-            href={`mailto:${personalInfo.email}`}
-            className="hidden md:block px-5 py-2 rounded-full bg-teal-500 hover:bg-teal-600 text-white font-medium transition-all shadow-lg shadow-teal-500/20 text-sm"
-          >
-            Hire Me
-          </a>
         </div>
       </nav>
 

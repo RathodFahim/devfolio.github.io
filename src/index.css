@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════
+   PORTFOLIO – Custom Styles & Animations
+   ═══════════════════════════════════════ */
+
+/* ── Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a1a;
+  overflow-x: hidden;
+}
+
+/* ── Hero Gradient Text ── */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #a78bfa 0%, #818cf8 25%, #6366f1 50%, #8b5cf6 75%, #c084fc 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* ── Typewriter Cursor ── */
+.typewriter-cursor {
+  color: #8b5cf6;
+  animation: blink 0.8s step-end infinite;
+  font-weight: 200;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ── Animated Background Orbs ── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+  top: -10%;
+  left: -10%;
+  animation: orb-move-1 15s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent 70%);
+  bottom: 10%;
+  right: -5%;
+  animation: orb-move-2 18s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.08), transparent 70%);
+  top: 40%;
+  left: 50%;
+  animation: orb-move-3 20s ease-in-out infinite;
+}
+
+.orb-contact {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.08), transparent 60%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orb-move-1 12s ease-in-out infinite;
+}
+
+@keyframes orb-move-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes orb-move-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 30px) scale(1.08); }
+  66% { transform: translate(30px, -20px) scale(0.92); }
+}
+
+@keyframes orb-move-3 {
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-50%, -30px) scale(1.1); }
+}
+
+/* ── Floating Stickers ── */
+.sticker {
+  will-change: transform;
+  z-index: 1;
+}
+
+.sticker-float-1 {
+  animation: sticker-1 6s ease-in-out infinite;
+}
+
+.sticker-float-2 {
+  animation: sticker-2 8s ease-in-out infinite;
+}
+
+.sticker-float-3 {
+  animation: sticker-3 7s ease-in-out infinite;
+}
+
+@keyframes sticker-1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(8deg); }
+}
+
+@keyframes sticker-2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-14px) rotate(-6deg); }
+  66% { transform: translateY(-8px) rotate(4deg); }
+}
+
+@keyframes sticker-3 {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-20px) rotate(-10deg) scale(1.08); }
+}
+
+/* ── Glass Card ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 40px rgba(139, 92, 246, 0.08);
+}
+
+/* ── Scroll Reveal ── */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Skill Cards stagger ── */
+.skill-card {
+  opacity: 0;
+  transform: translateY(24px) scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.revealed .skill-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.revealed .skill-card:nth-child(1) { transition-delay: 0ms; }
+.revealed .skill-card:nth-child(2) { transition-delay: 80ms; }
+.revealed .skill-card:nth-child(3) { transition-delay: 160ms; }
+.revealed .skill-card:nth-child(4) { transition-delay: 240ms; }
+.revealed .skill-card:nth-child(5) { transition-delay: 320ms; }
+.revealed .skill-card:nth-child(6) { transition-delay: 400ms; }
+
+/* ── Education items stagger ── */
+.edu-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revealed .edu-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.revealed .edu-item:nth-child(1) { transition-delay: 0ms; }
+.revealed .edu-item:nth-child(2) { transition-delay: 150ms; }
+.revealed .edu-item:nth-child(3) { transition-delay: 300ms; }
+
+/* ── Slow Pulse ── */
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d4a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
