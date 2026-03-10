@@ -93,7 +93,7 @@ const Portfolio = () => {
       title: "Fake News Detection",
       description: "Developed an AI/ML app to detect fake news using Python and various ML libraries. Implemented TF-IDF Vectorization for text feature extraction.",
       tech: ["Python", "Pandas", "Numpy", "NLTK", "Scikit-Learn"],
-      link: "#", // Placeholder for actual link
+      link: "https://rathodfahim.github.io/Fake_news-Detection/",
       github: "https://github.com/RathodFahim/Fake_news-Detection" // Placeholder
     },
     {
